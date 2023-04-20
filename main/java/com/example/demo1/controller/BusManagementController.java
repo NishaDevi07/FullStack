@@ -50,7 +50,7 @@ public class BusManagementController {
 	// update BusManagement rest api
 
 	@PutMapping("/busManagements/{id}")
-	public ResponseEntity<BusManagement> updateEmployee(@PathVariable Integer id, @RequestBody BusManagement busManagementDetails){
+	public ResponseEntity<BusManagement> updateBusManagement(@PathVariable Integer id, @RequestBody BusManagement busManagementDetails){
 		BusManagement busManagement = busManagementRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("BusManagement not exist with id :" + id));
 
