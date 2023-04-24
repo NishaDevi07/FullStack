@@ -1,0 +1,21 @@
+section{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(https://wallpapercave.com/wp/wp7642340.png);
+    background-size: cover;
+    background-position: center;
+}
+h3{
+    color: #fff;
+}
+label{
+    color: rgb(9, 9, 9);
+}
+input{
+    color: blue;
+}
+input [type="text"]{
+    width: 60px;
+
+}

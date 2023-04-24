@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="'en">
+<head>
+  <link rel="stylesheet" href="login-form.component.css">
+  <title>YELLOW BUS</title>
+</head>
+<body>
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form action="">
+          <h2>Login</h2>
+          <div class="inputbox">
+            <span class="form-label" for="typeusername">User Name</span>
+          
+           <input type="username" name ="username"required [(ngModel)]="username">
+                  
+        </div>
+        <div class="inputbox"> 
+          <span class="form-label" for="typePassword">Password</span>
+                   <input type="password" name ="password"required [(ngModel)]="password">
+                  
+        </div>
+        <p id="e">{{emessage}}</p>
+        <br/>
+           <button (click)=checkLogin() class="btn btn-success">Log In</button>
+         <!-- <div class="register"></div>
+          <p>Don't have an account<a href="http://localhost:4200/app-registration-form">Register</a></p>-->
+        
+        </form>
+      </div>
+      </div>
+  </section>
+ <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+    <head>
+     <link rel="stylesheet" href="bus-details-list.component.css">
+    </head>
+    
+    <div class="banner">  
+        <div class="list row">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search by busDetails" color="black"[(ngModel)]="startingPoint"/>
+                <!--</div>
+                <div class="input-group=append">-->
+                    <button class="btn btn-outline-dark" type="button" (click)="searchBystartingPoint()">Search</button>
+                </div>
+            </div>
+           </div>
+        <button class="btn btn-outline-dark" type="button" (click) = "fetchAcBus()">
+            Fetch Ac Bus
+          </button>
+          
+          <button class="btn btn-outline-dark" type="button" (click) = "fetchNonAcBus()">
+            Fetch NonAc Bus
+          </button> 
+          
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Starting Point</th>
+            <th> Ending Point</th>
+            <th> Driver Name </th>
+            <th> Driver Number</th>
+            <th> Bus Id</th>
+            <th> Bus Number</th>
+            <th> Bus Type</th>
+            <th> Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let bus of busDetails" >
+            <td> {{ bus.startingPoint}} </td>
+            <td> {{ bus.endingPoint}} </td>
+            <td> {{ bus.driverName }} </td>
+            <td> {{ bus.driverNumber}} </td>
+            <td> {{ bus.busId}} </td>
+            <td> {{ bus.busNumber }} </td>
+            <td> {{ bus.busType }} </td>
+            <td>
+                <button (click) = "updateBusDetails(bus.busId)" class = "btn btn-info"> Update</button>
+                <button (click) = "confirmDelete(bus)" class = "btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click) = "BusDetails(bus.busId)" class = "btn btn-warning" style="margin-left: 10px"> View</button>
+                <button (click) = "bookTickets(bus)" class = "btn btn-primary" style="margin-left: 10px"> Book Tickets!</button>
+            </td>
+        </tr>
+        <tr *ngIf="busDetails.length !== 0">
+            <button class="m-3 btn-sm-btn-success" (click)="confirmDeleteAll()" type="submit">
+                Remove All
+            </button>
+            </tr>
+            <tr scope="row" *ngIf="busDetails.length === 0">
+                <td colspan="4" class="text-center">No records</td>
+            </tr>
+    </tbody>
+</table>
+
+
+    
+   
