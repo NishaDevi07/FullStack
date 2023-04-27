@@ -1,0 +1,24 @@
+/*section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://getwalls.io/media/large/2020/01/bus-wallpapers-large-386080900.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}*/
+section{
+    background-image: url("C:\Users\Nisha Devi\OneDrive\angularProject\busManagement\src\assets\viewbackground.jpg");
+    text-align: center;
+}
+div, h3{
+    color: #fff;
+}
+
+form{
+    align-content: center;
+}
+button{
+    background-color: rgb(13, 234, 230);
+}

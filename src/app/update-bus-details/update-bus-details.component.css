@@ -1,0 +1,21 @@
+section{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("C:\Users\Nisha Devi\OneDrive\angularProject\busManagement\src\assets\viewbackground.jpg");
+    background-size: cover;
+    background-position: center;
+}
+h3{
+    color: #fff;
+}
+label{
+    color: #fff;
+}
+input{
+    color: rgb(0, 0, 4);
+}
+input [type="text"]{
+    width: 60px;
+
+}
